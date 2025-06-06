@@ -27,16 +27,19 @@ p, a, input[type=submit] {
 
 body {
     background-color: var(--blancusco);
+    min-width: 320px;
 }
 
 header {
-    background-color: var(--blancusco);
+    background-color: var(--negrusco);
     background-image: url(img/Superlocal_2025_01.png);
     background-repeat: no-repeat;
+    min-height: 330px;
     background-size: 140%;
     background-position: center top;
     background-attachment: fixed;
     padding-bottom: 1em;
+
 }
 
 .navegacion {
@@ -99,7 +102,7 @@ span {
 }
 
 #primera article {
-    width: 350px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--negrusco);
@@ -111,7 +114,7 @@ span {
 }
 
 #primera article img {
-    width: calc(350px - 1em);
+    width: calc(300px - 1em);
     padding-bottom: 1em;
     height: 300px;
     object-fit: cover;
@@ -157,9 +160,10 @@ span {
 }
 
 #galeria {
+    min-width: 305px;
+    margin: 1em 0 1.5em 0;
     display: grid;
     justify-content: center;
-    margin: 1em 0 1.5em 0;
 }
 
 #galeria article {
@@ -214,7 +218,7 @@ span {
 #formulario {
     background-color: var(--lila);
     text-align: center;
-    height: 30vh;
+    height: 22vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -251,7 +255,6 @@ input[type=submit]:hover {
 
 footer {
     background-color: var(--marron);
-    height: 10vh;
     display: flex;
     flex-direction: column;
     color: var(--blancusco);
@@ -269,8 +272,22 @@ footer h3 {
     gap: 10px;
 }
 
+#iconos img {
+    display: block;
+}
+
 #primera div:nth-of-type(2) {
     display: none;
+}
+
+@media all and (max-width:350px) {
+    #galeria {
+        display: block;
+    }
+    #galeria img:nth-of-type(1) {
+        width: 100%;
+
+    }
 }
 
 /* TABLET */
@@ -374,6 +391,7 @@ footer h3 {
     }
 
     footer {
+        height: 8vh;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
@@ -383,6 +401,7 @@ footer h3 {
 
     footer h3 {
         font-size: 1em;
+        margin-bottom: 0;
     }
 
     #galeria {
@@ -517,7 +536,15 @@ footer h3 {
         display: inline;
     }
 
-    .nuevo p {
+    .articles article {
+        position: relative;
+    }
+
+    #primera article p:nth-of-type(2) {
+        padding-bottom: 3px;
+    }
+
+    .nuevo {
         position: absolute;
         font-weight: bold;
         background-color: var(--azul);
@@ -525,19 +552,19 @@ footer h3 {
         color: var(--blancusco);
     }
 
-    .nuevo p:nth-of-type(1) {
-        top: 6.5em;
-        left: 28.7em;
+    .articles article:nth-of-type(1) p:nth-of-type(2) {
+        top: 15px;
+        right: 0px;
     }
 
-    .nuevo p:nth-of-type(2) {
-        top: 6.5em;
-        left: 51.7em;
+    .articles article:nth-of-type(2) p:nth-of-type(2) {
+        top: 15px;
+        right: 0px;
     }
 
-    .nuevo p:nth-of-type(3) {
-        top: 6.5em;
-        left: 74.5em;
+    .articles article:nth-of-type(3) p:nth-of-type(2) {
+        top: 15px;
+        right: 0px;
     }
 
     #galeria img {
