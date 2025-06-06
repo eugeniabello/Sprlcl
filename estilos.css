@@ -155,7 +155,7 @@ span {
     background-color: transparent;
 }
 
-#primera div:nth-of-type(2) {
+.nuevo {
     display: none;
 }
 
@@ -546,6 +546,7 @@ footer h3 {
     }
 
     .nuevo {
+        display: inline;
         position: absolute;
         font-weight: bold;
         background-color: var(--azul);
